@@ -1,0 +1,22 @@
+<suite name="amazontestSuite" parallel="tests" thread-count="3">
+    <test name="ChromeTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="test.amazontest"/>
+        </classes>
+    </test>
+
+    <test name="FirefoxTest">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="test.amazontest"/>
+        </classes>
+    </test>
+
+    <test name="EdgeTest">
+        <parameter name="browser" value="MicrosoftEdge"/>
+        <classes>
+            <class name="test.amazontest"/>
+        </classes>
+    </test>
+</suite>
