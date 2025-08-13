@@ -17,17 +17,17 @@ public class amazontest {
 	    @Parameters("browser")
 	    @BeforeMethod
 	    public void setup(String browser) throws MalformedURLException {
-	        DesiredCapabilities cap = new DesiredCapabilities();
+	        DesiredCapabilities dc = new DesiredCapabilities();
 
 	        if (browser.equalsIgnoreCase("chrome")) {
-	            cap.setBrowserName("chrome");
+	            dc.setBrowserName("chrome");
 	        } else if (browser.equalsIgnoreCase("firefox")) {
-	            cap.setBrowserName("firefox");
+	            dc.setBrowserName("firefox");
 	        } else if (browser.equalsIgnoreCase("MicrosoftEdge")) {
-	            cap.setBrowserName("MicrosoftEdge");
+	            dc.setBrowserName("MicrosoftEdge");
 	        }
 
-	        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
+	        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), dc);
 	    }
 
 	    @Test
